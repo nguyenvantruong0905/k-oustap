@@ -10,6 +10,20 @@
 <title>METAP - K-ous Nguyễn</title>
 <style>
   
+  .btn{
+    display: inline-block;
+    text-decoration: : none;
+    background-color: transparent;
+    border: none;
+    outline:none;
+    padding: 5px 30px;
+    border-radius: 50px;
+    cursor:pointer;
+    transition : opacity 0.2s;
+    min-width: 50px
+
+}
+  
 html, body {
     width: 100%;
     height:100%;
@@ -84,6 +98,9 @@ html, body {
   .hack {
     visibility: hidden;
   }
+  body,a {
+      cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur862.ani), url(http://cur.cursors-4u.net/cursors/cur-9/cur862.png), progress !important;
+    }
   
   #form-card {
     margin: 20px 0;
@@ -128,13 +145,13 @@ html, body {
 <div>
 <label>Đổi logo (Ảnh PNG trong suốt, size &gt; 250px) </label>
 <input type="file" @change="changeLogo" accept="image/*" />
-<button style="background-color: #ffb702;" v-on:click="showLogo = !showLogo">
+<button class="btn" style="background-color: #ffb702; opacity: 0.8;" v-on:click="showLogo = !showLogo">
 Ẩn/Hiện Logo
 </button>
-<button style="background-color: red;" v-on:click="logoSize -= 10">
+<button  class="btn" style="background-color: red; opacity: 0.8;" v-on:click="logoSize -= 10">
 - Thu nhỏ
 </button>
-<button style="background-color: #71be34" v-on:click="logoSize += 10">
+<button class="btn" style="background-color: #71be34;opacity: 0.8;" v-on:click="logoSize += 10">
 + Phóng to
 </button>
 </div>
@@ -149,10 +166,10 @@ tự code)
 </h5>
 <div>
 <input v-model="url" placeholder="URL" id="url" />
-<button style="background-color: red;" v-on:click="updateQR(-10)">
+<button class="btn" style="background-color: red;opacity: 0.8;" v-on:click="updateQR(-10)">
 - Thu nhỏ
 </button>
-<button style="background-color: #71be34" v-on:click="updateQR(10)">
+<button class="btn" style="background-color: #71be34;opacity: 0.8;" v-on:click="updateQR(10)">
 + Phóng to
 </button>
 </div>
@@ -171,10 +188,10 @@ tự code)
 <select v-model="font">
 <option v-for="fnt in fonts" :value="fnt">Phông chữ: {{fnt}}</option>
 </select>
-<button style="background-color: red;" v-on:click="fontSize -= 2">
+<button class="btn" style="background-color: red;opacity: 0.8;" v-on:click="fontSize -= 2">
 - Thu nhỏ
 </button>
-<button  style="background-color: #71be34" v-on:click="fontSize += 2">
+<button class="btn" style="background-color: #71be34;opacity: 0.8;" v-on:click="fontSize += 2">
 + Phóng to
 </button>
 </div>
@@ -193,6 +210,7 @@ Nếu xuất file PDF thì đem đi màu A4, chọn <b>Fit to Paper</b> khi in
 là ok. <br />
 Dán ảnh này lên thẻ NFC trắng <b>(8.55cm X 5.4cm)</b> là được nhé!
 </p>
+Trang web này màu mè dậy thôi chứ lấy nguồn code từ anh code dạo:
 </div>
 </div>
 </div>
