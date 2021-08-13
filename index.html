@@ -264,7 +264,7 @@ const readFile = file => {
 
 const getBackgrounds = () => {
   const backgrounds = [
-    "/1.jpeg", "/2.jpeg", "/3.jpeg", "/4.jpeg", "/5.jpeg", "/6.jpeg"
+   "/imgs/1.jpeg", "/imgs/2.jpeg", "/imgs/3.jpeg", "/imgs/4.jpeg", "/imgs/5.jpeg", "/imgs/6.jpeg"
   ];
 
   return Promise.all(backgrounds.map(bg => toDataURL(bg)));
@@ -292,7 +292,7 @@ const app = new Vue({
     qrCode: undefined,
     qrSize: 275,
 
-    name: "Phạm Huy Hoàng",
+    name: "K-ous Nguyễn",
     fontSize: 85,
     fonts: fonts,
     font: fonts[0],
@@ -354,7 +354,7 @@ const app = new Vue({
       document.body.appendChild(img);
 
       const link = document.createElement("a");
-      link.download = "taotap-card.png";
+      link.download = "k-ous-card.png";
       link.href = dataUrl;
       link.click();
     },
@@ -385,7 +385,7 @@ const app = new Vue({
       doc.line(0, 0, 0, 297);
       doc.line(210, 0, 210, 297);
       doc.line(0, 297, 210, 297);
-      doc.save("taotap.pdf");
+      doc.save("k-ous.pdf");
     },
     setBackground: function (bg) {
       this.background = bg;
